@@ -13,21 +13,48 @@ import axios from 'axios';
 export default class BasicTable extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { productList: [] };
+    this.state = { productList: [],
+                   cart:{
+                      quantity: '',
+                      userEmail: '',
+                      productId: ''
+                    } 
+    };
   }
 
   
 
   productsHandler = () => {
     axios.get("http://localhost:8080/getProducts").then((response) => {
-      localStorage.getItem("loggedInUser");
+      //localStorage.getItem("loggedInUser");
       this.setState({ productList: response.data });
     }).catch((error) => {
       console.log(error);
     })
   }
   cartHandler(productDetails){
-    console.log(productDetails);
+        this.setState({ cart: {
+                            quantity: '1',
+                            userEmail: localStorage.getItem("loggedInUser"),
+                            productId: productDetails.pId
+                              } 
+      }, function(){
+        if(this.state.cart.quantity==='1'){
+          axios.post("http://localhost:8080/saveCart",this.state.cart).then((response) => {
+              console.log(response);
+              this.setState({ cart: {
+                quantity: '',
+                userEmail: '',
+                productId: ''
+                  } 
+              });
+          }).catch((error) => {
+            console.log(error);
+          })
+        }
+      });
+      
+    
   }
 
 
@@ -71,7 +98,7 @@ export default class BasicTable extends React.Component {
 
                 <TableCell align="right">${row.pPrice}</TableCell>
                 <TableCell align="right">{row.pQuantity}</TableCell>
-                <TableCell align="right">  <button class="btn btn-success" onClick={() =>this.cartHandler(row)}>Add to cart</button></TableCell>
+                <TableCell align="right">  <button className="btn btn-success" onClick={() =>this.cartHandler(row)}>Add to cart</button></TableCell>
               
               </TableRow>
             ))}

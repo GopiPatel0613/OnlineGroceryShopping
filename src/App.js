@@ -13,7 +13,7 @@ import Services from './components/Services';
 function App(){
   return(
     <Router>
-    <div classname="App">
+    <div className="App">
     <Navbar/>
     <Routes>
       <Route exact path="/SignUp" element={<SignUp />}/>
