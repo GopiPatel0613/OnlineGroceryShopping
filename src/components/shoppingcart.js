@@ -10,8 +10,9 @@ const ShoppingCart=()=>{
   let [cart, setcart] = useState({
     userEmail: '',
     productImage: '',
+    productName: '',
     quantity: '',
-    price: '',
+    productPrice: '',
     total:'',
   })
 const cartChangeHandler = (event) => {
@@ -26,7 +27,7 @@ const cartChangeHandler = (event) => {
 let email = localStorage.getItem("loggedInUser");
 const cartSubmitHandler = () => {
    axios.get("http://localhost:8080/getCart", { params: { email: email } }).then((response) => {
-    console.log(response);
+    console.log(cart);
    }).catch((error) => {
        console.log(error);         })
 }
