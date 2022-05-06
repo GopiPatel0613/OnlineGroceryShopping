@@ -26,7 +26,7 @@ const cartChangeHandler = (event) => {
 let email = localStorage.getItem("loggedInUser");
 const cartSubmitHandler = () => {
    axios.get("http://localhost:8080/getCart", { params: { email: email } }).then((response) => {
-      
+    console.log(response);
    }).catch((error) => {
        console.log(error);         })
 }
@@ -34,16 +34,14 @@ return (
   cartSubmitHandler(),
    <form className="row g-3">
        <h2> ShoppingCart!!!</h2>
-                   <div className="col-md-6">
-            <label htmlFor="inputpPhoto" className="form-label">ProductImage</label>
-           <input name="pPhoto" value={cart.p} onChange={cartChangeHandler} type="image" className="form-control" id="inputproductImage" />
-       </div>
-       
-       
-        <div className="d-grid gap-2 ">
-            <button onClick={cartSubmitHandler} className="bg-dark btn btn-outline-success" type="button">Submit</button>
-        </div>
+       <div className="product-info">
+                <p className="Products-name">{Products.pName}</p>
+                <p className="product-price">{Products.price}</p>
+            
+           
+      </div>
     </form>
+    
 )
 }
 export default ShoppingCart

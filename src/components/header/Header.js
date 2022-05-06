@@ -23,7 +23,7 @@ export default function Header() {
            return(
                <div>
                <button onClick={signOutSubmitHandler}type='button'>Logout </button>
-               <Link className="nav-link" to="/ShoppingCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></Link> 
+               <Link className="nav-link" to="/ShoppingCart"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link> 
                </div> 
            )
     
