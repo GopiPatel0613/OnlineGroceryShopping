@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from "./components/Navbar/Navbar";
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Products from "./components/Products";
@@ -7,26 +6,45 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import ThankYou from './components/Thankyou/Thankyou';
 import AboutUs from './components/AboutUs';
-import shoppingcart from './components/shoppingcart';
+import ShoppingCart from './components/ShoppingCart';
 import Services from './components/Services';
+import Header from './components/header/Header';
+import background from './components/images/background.jpeg';
+import './App.css'
+
+
+
+
 
 function App(){
   return(
     <Router>
+     
+      <div>
+        
+      
     <div className="App">
-    <Navbar/>
+    
+      <div>
+    <Header/>
     <Routes>
       <Route exact path="/SignUp" element={<SignUp />}/>
       <Route exact path="/Products" element={<Products />}/> 
       <Route exact path="/Login" element={<Login />}/> 
       <Route exact path="/Thankyou" element={<ThankYou />}/> 
       <Route exact path="/AboutUs" element={<AboutUs />}/> 
-      <Route exact path="/shoppingcart" element={<shoppingcart/>}/>
+      <Route exact path="/ShoppingCart" element={<ShoppingCart/>}/>
       <Route exact path="/Services" element={<Services />}/> 
     </Routes>
- 
     </div>
+    </div>
+    </div>
+    <div >
+    <img src={background} style={{ display: "inline" }} width="100%" height="100%"  />
+    </div>
+    
     </Router>
+    
     
 
   );

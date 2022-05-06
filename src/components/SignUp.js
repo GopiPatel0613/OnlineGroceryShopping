@@ -41,26 +41,26 @@ import axios from "axios";
         <form className="row g-3">
             <h2> Sign up below!!!</h2>
                         <div className="col-md-6">
-                 <label for="inputFirstName" className="form-label">First Name</label>
+                 <label htmlFor="inputFirstName" className="form-label">First Name</label>
                 <input name="firstName" value={user.firstName} onChange={userChangeHandler} type="text" className="form-control" id="inputFirstName" />
             </div>
             <div className="col-md-6">
-                <label for="inputLastName" className="form-label">Last Name</label>
+                <label htmlFor="inputLastName" className="form-label">Last Name</label>
                 <input name="lastName" value={user.lastName} onChange={userChangeHandler} type="text" className="form-control" id="inputLastName" />
              </div>
 
              <div className="col-md-6">
-                 <label for="inputEmail4" className="form-label">Email</label>
+                 <label htmlFor="inputEmail4" className="form-label">Email</label>
                  <input name="email" value={user.email} onChange={userChangeHandler} type="email" className="form-control" id="inputEmail4" />
              </div>
              <div className="col-md-6">
-                 <label for="inputPassword4" className="form-label">Password</label>
+                 <label htmlFor="inputPassword4" className="form-label">Password</label>
                  <input name="password" value={user.password} onChange={userChangeHandler} type="password" className="form-control" id="inputPassword4" />
              </div>
              <div className="col-12">
                  <div className="form-check">
                      <input className="form-check-input" type="checkbox" id="gridCheck" />
-                     <label className="form-check-label" for="gridCheck">
+                     <label className="form-check-label" htmlFor="gridCheck">
                          Check me out
                      </label>
                  </div>
