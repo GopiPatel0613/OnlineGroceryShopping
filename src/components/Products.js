@@ -36,7 +36,6 @@ export default class BasicTable extends React.Component {
     })
   }
   cartHandler(productDetails){
-    console.log(productDetails);
     const params = {
       cart: {
         quantity: 1,
@@ -44,21 +43,11 @@ export default class BasicTable extends React.Component {
         productId: productDetails.pId
       }
     }
-        
-      // this.setState({ cart: {
-        //                     quantity: '1',
-        //                     userEmail: localStorage.getItem("loggedInUser"),
-        //                     productId: productDetails.pId
-        //                       } 
-      // }, function(
-        if(this.state.cart.quantity==='1'){
-          axios.post("http://localhost:8080/saveCart",params).then((response) => {
-              console.log(response);
-              this.setState(response.data);
+
+          axios.post("http://localhost:8080/saveCart",params.cart).then((response) => {
           }).catch((error) => {
             console.log(error);
           })
-        }
   };
       
     
