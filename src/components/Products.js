@@ -40,7 +40,10 @@ export default class BasicTable extends React.Component {
       cart: {
         quantity: 1,
         userEmail: localStorage.getItem("loggedInUser"),
-        productId: productDetails.pId
+        productId: productDetails.pId,
+        productName: productDetails.pName,
+        productPhoto: productDetails.pPhoto,
+        productPrice: productDetails.pPrice
       }
     }
 
