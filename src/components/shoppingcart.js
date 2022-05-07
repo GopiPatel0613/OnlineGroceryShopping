@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-const shoppingCart=()=>{
+const ShoppingCart=()=>{
   const Navigate = useNavigate();
   let [cart, setcart] = useState({
     userEmail: '',
@@ -45,4 +45,4 @@ return (
     
 )
 }
-export default shoppingCart;
+export default ShoppingCart;
