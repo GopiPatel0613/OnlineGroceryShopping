@@ -45,4 +45,4 @@ return (
     
 )
 }
-export default shoppingCart
+export default shoppingCart;
