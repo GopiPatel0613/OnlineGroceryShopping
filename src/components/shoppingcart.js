@@ -14,12 +14,14 @@ import Paper from '@mui/material/Paper';
 
 const ShoppingCart=()=>{
   let [cart, setcart] = useState({
-    userEmail: '',
-    productImage: '',
+    cId: '',
+    productId: '',
     productName: '',
-    quantity: '',
+    productPhoto: '',
     productPrice: '',
-    total:'',
+    productTotal: '',
+    quantity: '',
+    userEmail: '',
   })
   let [cartTotal, setcartTotal] = useState({
     cartTotal: '',
@@ -48,6 +50,14 @@ const getCartTotal = () => {
    }).catch((error) => {
        console.log(error);         })
 }
+// cId: 4
+// productId: 1
+// productName: "Milk"
+// productPhoto: "https://i.ibb.co/0hM5Z6N/6000201479118.jpg"
+// productPrice: 3.79
+// productTotal: 7.58
+// quantity: 2
+// userEmail: "mp@gmail.com"
 return (
   cartSubmitHandler(), getCartTotal(),
   <TableContainer component={Paper}>
