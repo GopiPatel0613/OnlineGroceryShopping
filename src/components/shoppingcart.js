@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
+import './ShoppingCart.css';
 
 const ShoppingCart=()=>{
   let [cart, setcart] = useState({
@@ -30,14 +31,23 @@ const getCartTotal = () => {
   if(cartTotal.cartTotal===''){
     axios.get("http://localhost:8080/getCartTotal", { params: { email: email } }).then((response) => {
     cartTotal = response.data;
-    setcartTotal({cartTotal: response.data})
+    setcartTotal({cartTotal: response.data.toFixed(2)})
    }).catch((error) => {
        console.log(error);         })
   }
    
 }
 const deleteProductFromCart=(productDetails)=>{
-  console.log(productDetails);
+  axios.delete("http://localhost:8080/deleteCartProduct", { params: { id: productDetails.cId } }).then((response) => {
+    cartSubmitHandler();
+    getCartTotal();
+    window.location.reload(true);
+   }).catch((error) => {
+       console.log(error);         })
+}
+
+const checkoutHandler = ()=>{
+  console.log("checkout");
 }
 return (
   cartSubmitHandler(), getCartTotal(), 
@@ -75,6 +85,10 @@ return (
       ))}
     </TableBody>
   </Table>
+
+  <div align="right">Total: {cartTotal.cartTotal}
+  <button className="btn btn-success checkout" onClick={() =>checkoutHandler()}>Checkout</button>
+  </div>
 
 </TableContainer>  
 )
