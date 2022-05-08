@@ -79,7 +79,7 @@ return (
 
           <TableCell align="right">${row.productPrice}</TableCell>
           <TableCell align="right">{row.quantity}</TableCell>
-          <TableCell align="right">{row.productTotal}</TableCell>
+          <TableCell align="right">{row.productTotal.toFixed(2)}</TableCell>
           <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}>Delete</button></TableCell>
           </TableRow>
       ))}
