@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import Products from './Products';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
@@ -12,16 +12,10 @@ import Paper from '@mui/material/Paper';
 
 
 
+
 const ShoppingCart=()=>{
   let [cart, setcart] = useState({
-    cId: '',
-    productId: '',
-    productName: '',
-    productPhoto: '',
-    productPrice: '',
-    productTotal: '',
-    quantity: '',
-    userEmail: '',
+   cartArray: []
   })
   let [cartTotal, setcartTotal] = useState({
     cartTotal: '',
@@ -36,9 +30,11 @@ const cartChangeHandler = (event) => {
   
 }
 let email = localStorage.getItem("loggedInUser");
+
 const cartSubmitHandler = () => {
    axios.get("http://localhost:8080/getCart", { params: { email: email } }).then((response) => {
-    cart = response.data;
+    cart.cartArray = response.data;
+    //setcart(response.data);
     console.log(cart);
    }).catch((error) => {
        console.log(error);         })
@@ -59,7 +55,7 @@ const getCartTotal = () => {
 // quantity: 2
 // userEmail: "mp@gmail.com"
 return (
-  cartSubmitHandler(), getCartTotal(),
+  cartSubmitHandler(), getCartTotal(), 
   <TableContainer component={Paper}>
   <Table sx={{ minWidth: 650 }} aria-label="simple table">
     <TableHead>
@@ -74,14 +70,12 @@ return (
 
     <TableBody>
 
-      {/* {row => (
+      { cart.cartArray.map((row) => (
 
           <TableRow
           key={row.productId}
           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
           >
-          <TableCell component="th" scope="row">
-            {row.productImage}  </TableCell>
           <TableCell component="th" scope="row">
             {row.productName}
           </TableCell>
@@ -89,16 +83,14 @@ return (
           <TableCell align="right">{<img src={row.productPhoto} height='80' width='80' />} </TableCell>
 
           <TableCell align="right">${row.productPrice}</TableCell>
-          <TableCell align="right">{row.productQuantity}</TableCell>
-
+          <TableCell align="right">{row.quantity}</TableCell>
+          <TableCell align="right">{row.productTotal}</TableCell>
           </TableRow>
-      )} */}
-
-
+      ))}
     </TableBody>
   </Table>
-</TableContainer>
-    
+
+</TableContainer>  
 )
 }
 export default ShoppingCart;
