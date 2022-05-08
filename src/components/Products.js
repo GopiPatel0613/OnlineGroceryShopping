@@ -13,7 +13,7 @@ import axios from 'axios';
          
       
 
-export default class BasicTable extends React.Component {
+export default class Products extends React.Component {
   constructor(props) {
     super(props);
     this.state = { productList: [],
