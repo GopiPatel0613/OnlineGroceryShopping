@@ -19,17 +19,25 @@ const ShoppingCart=()=>{
 let email = localStorage.getItem("loggedInUser");
 
 const cartSubmitHandler = () => {
-   axios.get("http://localhost:8080/getCart", { params: { email: email } }).then((response) => {
-    setcart({cartArray: response.data})
-   }).catch((error) => {
-       console.log(error);         })
+  if(cart.cartArray.length===0){
+    axios.get("http://localhost:8080/getCart", { params: { email: email } }).then((response) => {
+      setcart({cartArray: response.data})
+     }).catch((error) => {
+         console.log(error);         })
+  }
 }
 const getCartTotal = () => {
-   axios.get("http://localhost:8080/getCartTotal", { params: { email: email } }).then((response) => {
+  if(cartTotal.cartTotal===''){
+    axios.get("http://localhost:8080/getCartTotal", { params: { email: email } }).then((response) => {
     cartTotal = response.data;
     setcartTotal({cartTotal: response.data})
    }).catch((error) => {
        console.log(error);         })
+  }
+   
+}
+const deleteProductFromCart=(productDetails)=>{
+  console.log(productDetails);
 }
 return (
   cartSubmitHandler(), getCartTotal(), 
@@ -62,6 +70,7 @@ return (
           <TableCell align="right">${row.productPrice}</TableCell>
           <TableCell align="right">{row.quantity}</TableCell>
           <TableCell align="right">{row.productTotal}</TableCell>
+          <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}>Delete</button></TableCell>
           </TableRow>
       ))}
     </TableBody>
