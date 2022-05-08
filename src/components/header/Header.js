@@ -13,7 +13,7 @@ export default function Header() {
 
     const signOutSubmitHandler = () => {
         localStorage.clear();
-        Navigate('/');
+        Navigate('/Products');
     }
 
 
