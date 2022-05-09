@@ -51,13 +51,20 @@ const checkoutHandler = ()=>{
 }
 
 const decreaseQty = (product) =>{
-
+  // let cartUpdate = cart.cartArray;
+  // cartUpdate[product.cId-1] = product.quantity-1;
+  // setcart({cartArray: cartUpdate})
 }
 
 const increaseQty = (product) =>{
-
+  // let cartUpdate = cart.cartArray;
+  // cartUpdate[product.cId-1] = product.quantity+1;
+  // setcart({cartArray: cartUpdate})
 }
 
+const quantityInput = (value)=>{
+ 
+}
 
 
 return (
