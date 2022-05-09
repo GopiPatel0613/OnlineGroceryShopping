@@ -50,16 +50,15 @@ const checkoutHandler = ()=>{
   console.log("checkout");
 }
 
-// Quantity State
-const [quantity, setQuantity] = useState(0);
+const decreaseQty = (product) =>{
 
-// Increase Quantity
-const AddItems = () => setQuantity(quantity => quantity + 1);
+}
 
-// Decrease Quantity
-const DecreaseItems = () => {
-  if(quantity > 0) setQuantity(quantity => quantity - 1);
-};
+const increaseQty = (product) =>{
+
+}
+
+
 
 return (
   cartSubmitHandler(), getCartTotal(), 
@@ -72,6 +71,7 @@ return (
         <TableCell align="right">Price</TableCell>
         <TableCell align="right">Quantity</TableCell>
         <TableCell align="right">Product's Total</TableCell>
+        <TableCell align="right">Delete Product</TableCell>
       </TableRow>
     </TableHead>
 
@@ -88,16 +88,13 @@ return (
           </TableCell>
 
           <TableCell align="right">{<img src={row.productPhoto} height='80' width='80' />} </TableCell>
-
           <TableCell align="right">${row.productPrice}</TableCell>
-          <TableCell align="right">{row.quantity}</TableCell>
+          <TableCell align="right">
+          <button onClick={decreaseQty(row)}> - </button>
+            <input className="quantityInput" type="text" value={row.quantity}/>
+          <button onClick={increaseQty(row)}> + </button>
+          </TableCell>
           <TableCell align="right">{row.productTotal.toFixed(2)}</TableCell>
-          <button type="button" className ="btn" onClick={() => AddItems()}>
-              Add Item
-            </button>
-            <button type="button" className ="btn" onClick={DecreaseItems}>
-              Decrease Item
-            </button>
           <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}>Delete</button></TableCell>
           </TableRow>
       ))}
