@@ -49,6 +49,18 @@ const deleteProductFromCart=(productDetails)=>{
 const checkoutHandler = ()=>{
   console.log("checkout");
 }
+
+// Quantity State
+const [quantity, setQuantity] = useState(0);
+
+// Increase Quantity
+const AddItems = () => setQuantity(quantity => quantity + 1);
+
+// Decrease Quantity
+const DecreaseItems = () => {
+  if(quantity > 0) setQuantity(quantity => quantity - 1);
+};
+
 return (
   cartSubmitHandler(), getCartTotal(), 
   <TableContainer component={Paper}>
@@ -80,6 +92,12 @@ return (
           <TableCell align="right">${row.productPrice}</TableCell>
           <TableCell align="right">{row.quantity}</TableCell>
           <TableCell align="right">{row.productTotal.toFixed(2)}</TableCell>
+          <button type="button" className ="btn" onClick={() => AddItems()}>
+              Add Item
+            </button>
+            <button type="button" className ="btn" onClick={DecreaseItems}>
+              Decrease Item
+            </button>
           <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}>Delete</button></TableCell>
           </TableRow>
       ))}
