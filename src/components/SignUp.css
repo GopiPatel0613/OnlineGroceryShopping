@@ -20,4 +20,10 @@
    border-radius: 50px !important;
 }
 
+.inputDetails{
+   margin-top: 20px;
+}
 
+#inputFirstName, #inputLastName, #inputEmail4, #inputPassword4{
+   width:280px;
+}
