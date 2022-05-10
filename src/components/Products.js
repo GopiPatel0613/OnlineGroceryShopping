@@ -65,7 +65,7 @@ export default class Products extends React.Component {
 
 
     return (
-      <TableContainer component={Paper}>
+      <TableContainer className="tableProducts" component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>

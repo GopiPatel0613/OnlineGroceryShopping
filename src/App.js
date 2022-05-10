@@ -29,13 +29,11 @@ function App(){
       
     <div className="App main-container" >
     
-    
-      <div>
     <Header/>
    
     <Routes>
    
-   
+      <Route exact path="/" element={<Products />}/> 
       <Route exact path="/Checkout" element={<Checkout />}/>
       <Route exact path="/SignUp" element={<SignUp />}/>
       <Route exact path="/Products" element={<Products />}/> 
@@ -47,8 +45,6 @@ function App(){
      
   
     </Routes>
-    
-    </div>
  
     </div>
     

@@ -22,9 +22,11 @@
   .Products:nth-child(2) {
     margin-left: 200px;
   }
+  /* a.nav-link{
+      width:100px !important;
+  } */
   .nav-link {
     color: rgb(62, 111, 19);
-   
     margin-right:20px ;
     margin-inline-start: auto;
     align-items: center;
