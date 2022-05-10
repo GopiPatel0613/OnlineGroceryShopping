@@ -50,16 +50,22 @@ const checkoutHandler = ()=>{
   console.log("checkout");
 }
 
-const decreaseQty = (product) =>{
-  // let cartUpdate = cart.cartArray;
-  // cartUpdate[product.cId-1] = product.quantity-1;
-  // setcart({cartArray: cartUpdate})
+const decreaseQty = (cartId) =>{
+  let cartUpdate = cart.cartArray;
+  if(cartUpdate[cartId-1].quantity!==0){
+    cartUpdate[cartId-1].quantity = cartUpdate[cartId-1].quantity-1;
+    cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal-cartUpdate[cartId-1].productPrice);
+    
+  }
+  setcart({cartArray: cartUpdate})
 }
 
-const increaseQty = (product) =>{
-  // let cartUpdate = cart.cartArray;
-  // cartUpdate[product.cId-1] = product.quantity+1;
-  // setcart({cartArray: cartUpdate})
+const increaseQty = (cartId) =>{
+  let cartUpdate = cart.cartArray;
+  cartUpdate[cartId-1].quantity = cartUpdate[cartId-1].quantity+1;
+  cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal+cartUpdate[cartId-1].productPrice);
+  
+  setcart({cartArray: cartUpdate})
 }
 
 const quantityInput = (value)=>{
@@ -97,9 +103,9 @@ return (
           <TableCell align="right">{<img src={row.productPhoto} height='80' width='80' />} </TableCell>
           <TableCell align="right">${row.productPrice}</TableCell>
           <TableCell align="right">
-          <button onClick={decreaseQty(row)}> - </button>
+          <button onClick={() =>decreaseQty(row.cId)}> - </button>
             <input className="quantityInput" type="text" value={row.quantity}/>
-          <button onClick={increaseQty(row)}> + </button>
+          <button onClick={() =>increaseQty(row.cId)}> + </button>
           </TableCell>
           <TableCell align="right">{row.productTotal.toFixed(2)}</TableCell>
           <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}>Delete</button></TableCell>
