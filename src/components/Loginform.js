@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import axios from "axios";
 import './Login.css';
+import Card from '@mui/material/Card';
 
 const Loginform =()=>{
     const Navigate = useNavigate();
@@ -28,29 +29,38 @@ const Loginform =()=>{
     }
 
     return(
+        <div className="row">
+            <div className="col-md-4"></div>
+            <div className="col-md-6 loginFormCard">
+            <Card className="loginFormCardMUI" sx={{ maxWidth: 475 }}>
+            <h2 className="loginFormLabel"> Login</h2>
         <form className="loginDetails">
             <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-6">
-                    <label htmlFor="inputDetails inputEmail4" className="form-label">Email</label>
-                    <input name="email" value={loginUser.email} onChange={changeHandler} type="email" className="form-control" id="inputEmail4" />
+                <div className="col-md-2"></div>
+                <div className="col-md-8">
+                    <label htmlFor="inputEmail4" className="inputDetails form-label">Email</label>
+                    <input name="email" value={loginUser.email} onChange={changeHandler} type="email" className="form-control" id="inputEmail1" />
                 </div>
-                <div className="col-md-3"></div>
+                <div className="col-md-2"></div>
             </div>
 
             <div className="row">
-                <div className="col-md-3"></div>
-                <div className="inputDetails col-md-6">
-                    <label htmlFor="inputPassword4" className="form-label">Password</label>
-                    <input name="password" value={loginUser.password} onChange={changeHandler} type="password" className="form-control" id="inputPassword4" />
+                <div className="col-md-2"></div>
+                <div className="col-md-8">
+                    <label htmlFor="inputPassword4" className="form-label inputDetails">Password</label>
+                    <input name="password" value={loginUser.password} onChange={changeHandler} type="password" className="form-control" id="inputPassword1" />
                 </div>
-                <div className="col-md-3"></div>
+                <div className="col-md-2"></div>
             </div>
         
             
              <button className="btn btn-outline-success loginButton" onClick={loginSubmitHandler} type="button">login</button>
              
              </form>
+             </Card>
+             </div>
+             <div className="col-md-4"></div>
+        </div>
              
 
                         

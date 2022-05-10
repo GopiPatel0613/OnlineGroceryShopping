@@ -11,7 +11,6 @@ import axios from "axios";
   
     return (
         <form className="loginForm">
-            <h2> Login below!!!</h2>
             <div className="col-md-12">
             <Loginform/> 
             </div>

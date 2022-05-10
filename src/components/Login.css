@@ -7,11 +7,26 @@
    margin-top: 10px;
 }
 
-.loginButton,.inputDetails{
+.loginButton{
+   margin-top: 30px;
+   margin-bottom: 50px;
+}
+.inputDetails{
    margin-top: 10px;
 }
 
+.loginFormCard{
+   margin-top: 10px;
+   margin-bottom: 280px;
+}
 
+.loginFormCardMUI{
+   border-radius: 50px !important;
+}
+
+.loginFormLabel{
+   margin-top: 40px;
+}
 
 
 
