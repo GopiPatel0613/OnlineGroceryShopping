@@ -15,7 +15,12 @@
     padding-right:30px;
   }
   img.Logo{
-      height: 11.5ex;
+      height: 5rem;
+      border-radius: 50%;
+
+  }
+  .Products:nth-child(2) {
+    margin-left: 200px;
   }
   .nav-link {
     color: rgb(62, 111, 19);
@@ -24,6 +29,15 @@
     margin-inline-start: auto;
     align-items: center;
     justify-items: center;
+  }
+  .Products:nth-child(4) {
+    width: 80px;
+  }
+  .right{
+      margin-left: 50%;
+  }
+  .left{
+      margin-left: 40%;
   }
   .loginSignup{
     width: 200px;
@@ -38,6 +52,7 @@
     display:contents;
     font-size: 1.90em;
     font-weight: bold;
+    border-radius: 50%;
   }
   
 

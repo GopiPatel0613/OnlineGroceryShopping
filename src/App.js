@@ -27,8 +27,8 @@ function App(){
      
         
       
-    <div className="App">
-   
+    <div className="App main-container" >
+    
     
       <div>
     <Header/>

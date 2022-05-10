@@ -30,7 +30,7 @@ export default function Header() {
     }
     else{
         return(
-            <div className="loginSignup">
+            <div className="right loginSignup">
             <Link className="nav-link" to="/Login">Login</Link>
                     
                     
@@ -57,7 +57,7 @@ export default function Header() {
                  
               
                     <div className="Products">
-                                <Link className="nav-link " aria-current="page" to="/Products">Products</Link>
+                    <Link className="nav-link " aria-current="page" to="/Products">Products</Link>
                     </div>
                     <div className="Services">
                     <Link className="nav-link" to="/Services">Services</Link>

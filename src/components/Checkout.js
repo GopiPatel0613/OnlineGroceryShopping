@@ -15,20 +15,14 @@ export default class Checkout extends React.Component {
     
       <div className="maincontainer">
        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-          <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-          <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">Features</a>
-            <a class="p-2 text-dark" href="#">Enterprise</a>
-            <a class="p-2 text-dark" href="#">Support</a>
-            <a class="p-2 text-dark" href="#">Pricing</a>
-          </nav>
-          <a class="btn btn-outline-primary" href="#">Sign up</a>
+          <h5 class="my-0 mr-md-auto font-weight-normal">Grocery on the go</h5>
+        
         </div>
         <div class="container">
           <div class="py-5 text-center">
             
             <h2>Checkout form</h2>
-            <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            
           </div>
           <div class="row">
             <div class="col-md-4 order-md-2 mb-4">

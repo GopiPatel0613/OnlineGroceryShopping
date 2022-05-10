@@ -1,8 +1,23 @@
 
 .signUpForm{
    display: inline;
-   margin-top: 10px;
+  
 }
 
+.signUpLabel{
+   margin-top: 30px !important;
+}
+.signUpButton{
+   margin-bottom: 30px !important;
+}
+
+.signUpFormCard{
+   margin-top: 10px;
+   margin-bottom: 280px;
+}
+
+.signUpFormCardMUI{
+   border-radius: 50px !important;
+}
 
 
