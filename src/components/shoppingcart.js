@@ -47,7 +47,10 @@ const deleteProductFromCart=(productDetails)=>{
 }
 
 const checkoutHandler = ()=>{
-  console.log("checkout");
+  axios.put("http://localhost:8080/updateCart", cart.cartArray).then((response) => {
+
+   }).catch((error) => {
+       console.log(error);         })
 }
 
 const decreaseQty = (cartId) =>{
@@ -70,13 +73,9 @@ const increaseQty = (cartId) =>{
   cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal+cartUpdate[cartId-1].productPrice);
   cartTotalUpdate = parseFloat(cartTotalUpdate) + parseFloat(cartUpdate[cartId-1].productPrice);
   cartTotalUpdate = cartTotalUpdate.toFixed(2);
-  
+
   setcart({cartArray: cartUpdate})
   setcartTotal({cartTotal: cartTotalUpdate})
-}
-
-const quantityInput = (value)=>{
- 
 }
 
 
