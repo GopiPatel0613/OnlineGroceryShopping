@@ -49,7 +49,7 @@ const deleteProductFromCart=(productDetails)=>{
 
 const checkoutHandler = ()=>{
   axios.put("http://localhost:8080/updateCart", cart.cartArray).then((response) => {
-    //Navigate('/Checkout');
+    Navigate('/Checkout');
    }).catch((error) => {
        console.log(error);         })
 }

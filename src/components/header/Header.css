@@ -7,19 +7,27 @@
   }
   .NavbarItems{
     background: linear-gradient(90deg, rgb(219, 229, 235) 100%, rgb(218, 210, 206) 100%);
-    background-image: "";
+    background-image: "https://i.ibb.co/rFzBbB8/images-q-tbn-ANd9-Gc-SOBJ36-Kper-To0-QKNo-Yy4-Nd5-S0e-9jxm-D6aw-usqp-CAU.jpg";
     height:100px;
     display: flex;
     align-items:center;
     list-style:none;
-    padding-left:50px;
     padding-right:30px;
+  }
+  img.Logo{
+      height: 11.5ex;
   }
   .nav-link {
     color: rgb(62, 111, 19);
-    margin-left: 60px;
-    margin-right:40px ;
+   
+    margin-right:20px ;
     margin-inline-start: auto;
+    align-items: center;
+    justify-items: center;
+  }
+  .loginSignup{
+    width: 200px;
+    display: inline-flex;
   }
   div{
     color: rgb(4, 14, 8);
@@ -31,10 +39,7 @@
     font-size: 1.90em;
     font-weight: bold;
   }
-
-  #main-nav-heading{
-      margin: 10% !important;
-  }
+  
 
 a:link {
     color: blue;

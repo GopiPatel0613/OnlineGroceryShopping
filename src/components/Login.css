@@ -1,0 +1,17 @@
+.loginForm{
+   display: block;
+}
+
+.loginDetails{
+   display: inline;
+   margin-top: 10px;
+}
+
+.loginButton,.inputDetails{
+   margin-top: 10px;
+}
+
+
+
+
+

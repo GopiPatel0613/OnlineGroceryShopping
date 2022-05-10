@@ -17,18 +17,25 @@ import './App.css'
 
 
 
+
 function App(){
   return(
+  
+    
     <Router>
+       
      
-      <div>
         
       
     <div className="App">
+   
     
       <div>
     <Header/>
+   
     <Routes>
+   
+   
       <Route exact path="/Checkout" element={<Checkout />}/>
       <Route exact path="/SignUp" element={<SignUp />}/>
       <Route exact path="/Products" element={<Products />}/> 
@@ -37,18 +44,17 @@ function App(){
       <Route exact path="/AboutUs" element={<AboutUs />}/> 
       <Route exact path="/ShoppingCart" element={<ShoppingCart/>}/>
       <Route exact path="/Services" element={<Services />}/> 
+     
+  
     </Routes>
+    
     </div>
-    </div>
-    </div>
-    <div >
-    <img src={background} style={{ display: "inline" }} width="100%" height="100%"  />
+ 
     </div>
     
+  
     </Router>
     
-    
-
   );
 
 }

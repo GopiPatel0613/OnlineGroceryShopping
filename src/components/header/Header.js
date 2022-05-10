@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Header.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Header() {
 
     const Navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function Header() {
        if(email){
            return(
                <div>
-               <button onClick={signOutSubmitHandler}type='button'>Logout </button>
+               <button className="btn btn-info" onClick={signOutSubmitHandler}type='button'>Logout </button>
                <Link className="nav-link" to="/ShoppingCart"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link> 
                </div> 
            )
@@ -30,7 +30,7 @@ export default function Header() {
     }
     else{
         return(
-            <div>
+            <div className="loginSignup">
             <Link className="nav-link" to="/Login">Login</Link>
                     
                     
@@ -47,20 +47,21 @@ export default function Header() {
         
         <header>
             <div className="mb-5">
-                <nav className="NavbarItems">
-                    <div className="container-fluid">
-                        <a className="navbar-brand" href="#"></a>
+        <nav className="NavbarItems">
+                    
+                     <a className="navbar-brand" href="#"></a>
                         
                         <div className="NavbarItems">
+                   <img src={require("../images/logo.jpeg")}  className="Logo" alt="logo"  />     
                
-                 <div id="main-nav-heading" className="navbar-logo">Express Online Grocery </div>
+                 
               
-                 <div className="Products">
-                            <Link className="nav-link active" aria-current="page" to="/Products">Products</Link>
-                        </div>
-                        <div className="Services">
+                    <div className="Products">
+                                <Link className="nav-link " aria-current="page" to="/Products">Products</Link>
+                    </div>
+                    <div className="Services">
                     <Link className="nav-link" to="/Services">Services</Link>
-               </div>
+                    </div>
                    <Link className="nav-link" to="/About Us">About Us</Link>
                
                   
@@ -70,7 +71,7 @@ export default function Header() {
                
                
                 </div>
-                    </div>
+                    
                 </nav>
             </div>
         </header>

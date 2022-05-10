@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from "react";
 import Loginform from './Loginform';
-
+import './Login.css';
 import axios from "axios";
 
 
@@ -10,9 +10,12 @@ import axios from "axios";
 
   
     return (
-        <form className="row g-3">
+        <form className="loginForm">
             <h2> Login below!!!</h2>
-             <Loginform />          
+            <div className="col-md-12">
+            <Loginform/> 
+            </div>
+                    
 
              
          </form>

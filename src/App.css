@@ -22,11 +22,24 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 20;
 }
 
 .App-link {
   color: #61dafb;
 }
+.main-container {
+background-image: ("../images/background.jpeg");
+
+}
+.App{
+  background-image: ("../images/background.jpeg");
+
+ 
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,6 +48,4 @@
   to {
     transform: rotate(360deg);
   }
-  
-  }
-
+}
