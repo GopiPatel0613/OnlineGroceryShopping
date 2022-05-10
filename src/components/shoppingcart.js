@@ -52,20 +52,27 @@ const checkoutHandler = ()=>{
 
 const decreaseQty = (cartId) =>{
   let cartUpdate = cart.cartArray;
+  let cartTotalUpdate = cartTotal.cartTotal;
   if(cartUpdate[cartId-1].quantity!==0){
     cartUpdate[cartId-1].quantity = cartUpdate[cartId-1].quantity-1;
     cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal-cartUpdate[cartId-1].productPrice);
-    
+    cartTotalUpdate = parseFloat(cartTotalUpdate) - parseFloat(cartUpdate[cartId-1].productPrice);
+    cartTotalUpdate = cartTotalUpdate.toFixed(2);
   }
   setcart({cartArray: cartUpdate})
+  setcartTotal({cartTotal: cartTotalUpdate})
 }
 
 const increaseQty = (cartId) =>{
   let cartUpdate = cart.cartArray;
+  let cartTotalUpdate = cartTotal.cartTotal;
   cartUpdate[cartId-1].quantity = cartUpdate[cartId-1].quantity+1;
   cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal+cartUpdate[cartId-1].productPrice);
+  cartTotalUpdate = parseFloat(cartTotalUpdate) + parseFloat(cartUpdate[cartId-1].productPrice);
+  cartTotalUpdate = cartTotalUpdate.toFixed(2);
   
   setcart({cartArray: cartUpdate})
+  setcartTotal({cartTotal: cartTotalUpdate})
 }
 
 const quantityInput = (value)=>{
