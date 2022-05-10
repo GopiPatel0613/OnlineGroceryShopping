@@ -7,6 +7,7 @@ import SignUp from "./components/SignUp";
 import ThankYou from './components/Thankyou/Thankyou';
 import AboutUs from './components/AboutUs';
 import ShoppingCart from './components/ShoppingCart';
+import Checkout from './components/Checkout';
 import Services from './components/Services';
 import Header from './components/header/Header';
 import background from './components/images/background.jpeg';
@@ -28,6 +29,7 @@ function App(){
       <div>
     <Header/>
     <Routes>
+      <Route exact path="/Checkout" element={<Checkout />}/>
       <Route exact path="/SignUp" element={<SignUp />}/>
       <Route exact path="/Products" element={<Products />}/> 
       <Route exact path="/Login" element={<Login />}/> 
