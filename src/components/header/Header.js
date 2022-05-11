@@ -47,19 +47,18 @@ export default function Header() {
         
         <header className='header'>
                     
-                     <a className="navbar-brand" href="#"></a>
+                    
                         
                         <div className="NavbarItems">
-                   <img src={require("../images/logo.jpeg")}  className="Logo" alt="logo"  />     
+                        <a className="navbar-brand" href="/"> <img src={require("../images/logo.jpeg")}  className="Logo" alt="logo"  />     </a>
+                  
                
                  
               
                     <div className="Products">
                     <Link className="nav-link " aria-current="page" to="/Products">Products</Link>
                     </div>
-                    <div className="Services">
-                    <Link className="nav-link" to="/Services">Services</Link>
-                    </div>
+
                    <Link className="nav-link" to="/About Us">About Us</Link>
                
                   

@@ -8,9 +8,7 @@ import ThankYou from './components/Thankyou/Thankyou';
 import AboutUs from './components/AboutUs';
 import ShoppingCart from './components/ShoppingCart';
 import Checkout from './components/Checkout';
-import Services from './components/Services';
 import Header from './components/header/Header';
-import background from './components/images/background.jpeg';
 import './App.css'
 import Home from './components/Home';
 
@@ -42,7 +40,6 @@ function App(){
       <Route exact path="/Thankyou" element={<ThankYou />}/> 
       <Route exact path="/AboutUs" element={<AboutUs />}/> 
       <Route exact path="/ShoppingCart" element={<ShoppingCart/>}/>
-      <Route exact path="/Services" element={<Services />}/> 
      
   
     </Routes>
