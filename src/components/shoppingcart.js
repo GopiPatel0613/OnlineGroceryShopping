@@ -124,8 +124,9 @@ return (
   <div align="right">Total: {cartTotal.cartTotal}
   <button className="btn btn-success checkout" onClick={() =>checkoutHandler()}>Checkout</button>
   </div>
-
+  <div className="cartContainer"></div>
 </TableContainer>  
+
 )
 }
 export default ShoppingCart;
