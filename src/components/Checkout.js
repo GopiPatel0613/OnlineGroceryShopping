@@ -2,7 +2,7 @@ import React, { useEffect,useState } from "react";
 // import axios from "axios";
 // import { Route } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
-
+import './Checkout.css'
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default class Checkout extends React.Component {
@@ -14,10 +14,7 @@ export default class Checkout extends React.Component {
     return (
     
       <div className="maincontainer">
-       <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-          <h5 class="my-0 mr-md-auto font-weight-normal">Grocery on the go</h5>
-        
-        </div>
+
         <div class="container">
           <div class="py-5 text-center">
             
@@ -137,7 +134,8 @@ export default class Checkout extends React.Component {
                     <label for="state">State</label>
                     <select class="custom-select d-block w-100" id="state" required>
                       <option value="">Choose...</option>
-                      <option>California</option>
+                      <option>Illinois</option>
+                      <option>Missouri</option>
                     </select>
                     <div class="invalid-feedback">
                       Please provide a valid state.
@@ -170,10 +168,6 @@ export default class Checkout extends React.Component {
                   <div class="custom-control custom-radio">
                     <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required />
                     <label class="custom-control-label" for="debit">Debit card</label>
-                  </div>
-                  <div class="custom-control custom-radio">
-                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required />
-                    <label class="custom-control-label" for="paypal">Paypal</label>
                   </div>
                 </div>
                 <div class="row">
@@ -215,7 +209,7 @@ export default class Checkout extends React.Component {
             </div>
           </div>
           <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; 2020-2021 therichpost.com</p>
+            <p class="mb-1">&copy; 2022 Grocery On The Go</p>
             <ul class="list-inline">
               <li class="list-inline-item"><a href="#">Privacy</a></li>
               <li class="list-inline-item"><a href="#">Terms</a></li>

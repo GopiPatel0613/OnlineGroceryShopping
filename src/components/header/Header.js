@@ -30,7 +30,7 @@ export default function Header() {
     }
     else{
         return(
-            <div className="right loginSignup">
+            <div className="loginSignup">
             <Link className="nav-link" to="/Login">Login</Link>
                     
                     
@@ -45,9 +45,7 @@ export default function Header() {
     return (
         
         
-        <header>
-            <div className="mb-5">
-        <nav className="NavbarItems">
+        <header className='header'>
                     
                      <a className="navbar-brand" href="#"></a>
                         
@@ -72,8 +70,7 @@ export default function Header() {
                
                 </div>
                     
-                </nav>
-            </div>
+                
         </header>
     )
 }

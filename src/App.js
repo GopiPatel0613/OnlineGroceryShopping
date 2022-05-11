@@ -12,6 +12,7 @@ import Services from './components/Services';
 import Header from './components/header/Header';
 import background from './components/images/background.jpeg';
 import './App.css'
+import Home from './components/Home';
 
 
 
@@ -33,7 +34,7 @@ function App(){
    
     <Routes>
    
-      <Route exact path="/" element={<Products />}/> 
+      <Route exact path="/" element={<Home />}/> 
       <Route exact path="/Checkout" element={<Checkout />}/>
       <Route exact path="/SignUp" element={<SignUp />}/>
       <Route exact path="/Products" element={<Products />}/> 

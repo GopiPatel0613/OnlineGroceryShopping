@@ -1,9 +1,5 @@
 .header {
-    padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px;
+    margin-top: -25px;
   }
   .NavbarItems{
     background: linear-gradient(90deg, rgb(219, 229, 235) 100%, rgb(218, 210, 206) 100%);
@@ -35,12 +31,7 @@
   .Products:nth-child(4) {
     width: 80px;
   }
-  .right{
-      margin-left: 50%;
-  }
-  .left{
-      margin-left: 40%;
-  }
+ 
   .loginSignup{
     width: 200px;
     display: inline-flex;
