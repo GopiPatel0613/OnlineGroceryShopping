@@ -1,13 +1,14 @@
 import React from 'react';
-import { Navigate } from 'react-router';
+import {useNavigate } from 'react-router';
 import './Home.css';
 
 
 
 
 const Home = () => {
+  const navigate = useNavigate()
     const handleScrollMenu=()=>{
-        Navigate('/Products')
+        navigate('/Products')
         console.log("hello");
     }
 return (

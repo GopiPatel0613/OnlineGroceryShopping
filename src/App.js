@@ -9,6 +9,7 @@ import AboutUs from './components/AboutUs';
 import ShoppingCart from './components/ShoppingCart';
 import Checkout from './components/Checkout';
 import Header from './components/header/Header';
+import Footer from './components/Footer';
 import './App.css'
 import Home from './components/Home';
 
@@ -46,7 +47,7 @@ function App(){
  
     </div>
     
-  
+    <Footer/>
     </Router>
     
   );

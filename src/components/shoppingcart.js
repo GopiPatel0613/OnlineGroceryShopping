@@ -8,9 +8,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
 import './ShoppingCart.css';
-import { Navigate } from 'react-router';
+import {useNavigate } from 'react-router';
 
 const ShoppingCart=()=>{
+  const navigate = useNavigate()
   let [cart, setcart] = useState({
    cartArray: []
   })
@@ -49,7 +50,7 @@ const deleteProductFromCart=(productDetails)=>{
 
 const checkoutHandler = ()=>{
   axios.put("http://localhost:8080/updateCart", cart.cartArray).then((response) => {
-    Navigate('/Checkout');
+    navigate('/Checkout');
    }).catch((error) => {
        console.log(error);         })
 }

@@ -59,7 +59,7 @@ export default function Header() {
                     <Link className="nav-link" aria-current="page" to="/Products">Products</Link>
                     </div>
 
-                   <Link className="nav-link" to="/About Us">About Us</Link>
+                   <Link className="nav-link" to="/AboutUs">About Us</Link>
                
                   
                 

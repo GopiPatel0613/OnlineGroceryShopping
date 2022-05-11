@@ -4,10 +4,13 @@
    background-size:  contain;
    /* width: 100vw; */
    /* height: 50vw; */
-   margin-bottom: -50px;
    }
 
    .checkoutFormCard{
       margin-top: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 60px;
+   }
+
+   .container{
+      margin-bottom: 60px;
    }
