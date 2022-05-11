@@ -1,6 +1,6 @@
 
   .NavbarItems{
-    background: linear-gradient(90deg, rgb(219, 229, 235) 100%, rgb(218, 210, 206) 100%);
+    background: linear-gradient(90deg, rgb(42, 107, 65) 100%, rgb(218, 210, 206) 100%);
     background-image: "https://i.ibb.co/rFzBbB8/images-q-tbn-ANd9-Gc-SOBJ36-Kper-To0-QKNo-Yy4-Nd5-S0e-9jxm-D6aw-usqp-CAU.jpg";
     height:100px;
     display: flex;
@@ -14,31 +14,37 @@
       margin-left: 20px;
 
   }
-  .Products:nth-child(2) {
-    margin-left: 200px;
-  }
+  
   /* a.nav-link{
       width:100px !important;
   } */
   .nav-link {
-    color: rgb(62, 111, 19);
-    margin-right:20px ;
+    color: rgb(214, 222, 207);
+    margin-right:2px ;
     margin-inline-start: auto;
     align-items: center;
     justify-items: center;
-  }
-  .Products:nth-child(4) {
-    width: 80px;
+    border: none;
+    color: white;
+  padding: 16px 32px;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid ;
+  border-radius: 20px;
   }
  
   .loginSignup{
     width: 200px;
     display: inline-flex;
   }
-  div{
-    color: rgb(4, 14, 8);
-  }
 
+  .products{
+    margin-left: 100px;
+  }
+  .logout{
+    background-color: yellow;
+    color: black;
+  }
   .navbar-logo{
     color: rgb(59, 171, 100);
     display:contents;
@@ -72,10 +78,9 @@ a:link {
 
 
 
-.nav-links:hover{
-    background-color: #d8d8e0;
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
+.nav-link:hover{
+    background-color: #e5eee6 !important;
+  color: black !important;
 }
 
 .fa-bars{

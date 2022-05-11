@@ -22,7 +22,7 @@ export default function Header() {
        if(email){
            return(
                <div>
-               <button className="btn btn-info" onClick={signOutSubmitHandler}type='button'>Logout </button>
+               <button className="btn logout nav-link" onClick={signOutSubmitHandler}type='button'>Logout </button>
                <Link className="nav-link" to="/ShoppingCart"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link> 
                </div> 
            )
@@ -55,8 +55,8 @@ export default function Header() {
                
                  
               
-                    <div className="Products">
-                    <Link className="nav-link " aria-current="page" to="/Products">Products</Link>
+                    <div className="products">
+                    <Link className="nav-link" aria-current="page" to="/Products">Products</Link>
                     </div>
 
                    <Link className="nav-link" to="/About Us">About Us</Link>
