@@ -115,7 +115,7 @@ return (
           <button onClick={() =>increaseQty(row.cId)}> + </button>
           </TableCell>
           <TableCell align="right">{row.productTotal.toFixed(2)}</TableCell>
-          <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}> <i class="fa fa-trash"></i>Delete</button></TableCell>
+          <TableCell align="right">  <button className="btn btn-success" onClick={() =>deleteProductFromCart(row)}> <i class="fa fa-trash"></i></button></TableCell>
           </TableRow>
       ))}
     </TableBody>
