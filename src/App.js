@@ -12,7 +12,7 @@ import Header from './components/header/Header';
 import Footer from './components/Footer';
 import './App.css'
 import Home from './components/Home';
-
+import Success from "./components/Success";
 
 
 
@@ -41,6 +41,7 @@ function App(){
       <Route exact path="/Thankyou" element={<ThankYou />}/> 
       <Route exact path="/AboutUs" element={<AboutUs />}/> 
       <Route exact path="/ShoppingCart" element={<ShoppingCart/>}/>
+      <Route exact path="/Success" element={<Success />}/> 
      
   
     </Routes>

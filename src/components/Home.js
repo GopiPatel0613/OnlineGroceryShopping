@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate()
     const handleScrollMenu=()=>{
         navigate('/Products')
-        console.log("hello");
+       
     }
 return (
     
