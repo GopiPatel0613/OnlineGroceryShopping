@@ -56,12 +56,19 @@ const checkoutHandler = ()=>{
 }
 
 const decreaseQty = (cartId) =>{
+ 
   let cartUpdate = cart.cartArray;
   let cartTotalUpdate = cartTotal.cartTotal;
-  if(cartUpdate[cartId-1].quantity!==0){
-    cartUpdate[cartId-1].quantity = cartUpdate[cartId-1].quantity-1;
-    cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal-cartUpdate[cartId-1].productPrice);
-    cartTotalUpdate = parseFloat(cartTotalUpdate) - parseFloat(cartUpdate[cartId-1].productPrice);
+  let arrayIndex = 0;
+  for(let i=0; i<cartUpdate.length;i++){
+    if(cartUpdate[i].cId===cartId){
+      arrayIndex = i;
+    }
+  }
+  if(cartUpdate[arrayIndex].quantity!==0){
+    cartUpdate[arrayIndex].quantity = cartUpdate[arrayIndex].quantity-1;
+    cartUpdate[arrayIndex].productTotal = (cartUpdate[arrayIndex].productTotal-cartUpdate[arrayIndex].productPrice);
+    cartTotalUpdate = parseFloat(cartTotalUpdate) - parseFloat(cartUpdate[arrayIndex].productPrice);
     cartTotalUpdate = cartTotalUpdate.toFixed(2);
   }
   setcart({cartArray: cartUpdate})
@@ -69,11 +76,18 @@ const decreaseQty = (cartId) =>{
 }
 
 const increaseQty = (cartId) =>{
+  console.log(cartId);
   let cartUpdate = cart.cartArray;
   let cartTotalUpdate = cartTotal.cartTotal;
-  cartUpdate[cartId-1].quantity = cartUpdate[cartId-1].quantity+1;
-  cartUpdate[cartId-1].productTotal = (cartUpdate[cartId-1].productTotal+cartUpdate[cartId-1].productPrice);
-  cartTotalUpdate = parseFloat(cartTotalUpdate) + parseFloat(cartUpdate[cartId-1].productPrice);
+  let arrayIndex = 0;
+  for(let i=0; i<cartUpdate.length;i++){
+    if(cartUpdate[i].cId===cartId){
+      arrayIndex = i;
+    }
+  }
+  cartUpdate[arrayIndex].quantity = cartUpdate[arrayIndex].quantity+1;
+  cartUpdate[arrayIndex].productTotal = (cartUpdate[arrayIndex].productTotal+cartUpdate[arrayIndex].productPrice);
+  cartTotalUpdate = parseFloat(cartTotalUpdate) + parseFloat(cartUpdate[arrayIndex].productPrice);
   cartTotalUpdate = cartTotalUpdate.toFixed(2);
 
   setcart({cartArray: cartUpdate})
